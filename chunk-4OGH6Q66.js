@@ -1,0 +1,3 @@
+var h=class{constructor(){this.lines=""}length(t){this.lines.length>t&&this.remove(t)}addKeyValue(t,i,s,e=","){let n=`"${t}": "${i}"${e}`;this.addLine(n,s)}Append(t){this.lines+=t}addLine(t,i){this.lines+=this.spaces(i)+t+`
+`}AppendLine(t){this.lines+=t.trimEnd()+`
+`}clear(){this.lines=""}add(t,i=0){if(i===0&&t.startsWith(" ")){let s="",e=t.split("");if(e.length){let n=!1;e.forEach(l=>{l===" "&&!n?s+=l:n=!0}),i=s.length,t=t.replace(s,"")}}this.lines+=this.spaces(i)+t}spaces(t){let i="";if(t>0)for(let s=0;s<t;s++)i+=" ";return i}addStringBuilder(t){this.lines+=t.toString()}toString(){return this.lines}remove(t){if(this.lines.length>0){let s=this.lines,e=s.length-t;s.length>e&&(this.lines=s.substring(0,e))}}};export{h as a};
